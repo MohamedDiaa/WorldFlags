@@ -20,6 +20,7 @@
 		C913C67726F7815E00369B2C /* CountryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67626F7815E00369B2C /* CountryList.swift */; };
 		C913C67926F7866400369B2C /* CountryBrief.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67826F7866400369B2C /* CountryBrief.swift */; };
 		C913C67C26F7870F00369B2C /* GetCountryBriefListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67B26F7870F00369B2C /* GetCountryBriefListAPI.swift */; };
+		C913C67F26F78A5F00369B2C /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67E26F78A5F00369B2C /* AppURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		C913C67626F7815E00369B2C /* CountryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryList.swift; sourceTree = "<group>"; };
 		C913C67826F7866400369B2C /* CountryBrief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBrief.swift; sourceTree = "<group>"; };
 		C913C67B26F7870F00369B2C /* GetCountryBriefListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountryBriefListAPI.swift; sourceTree = "<group>"; };
+		C913C67E26F78A5F00369B2C /* AppURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		C913C66D26F77C3200369B2C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C913C67E26F78A5F00369B2C /* AppURL.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				C913C64E26F77B6200369B2C /* ContentView.swift in Sources */,
 				C913C67726F7815E00369B2C /* CountryList.swift in Sources */,
 				C913C67126F77EAF00369B2C /* KeyValueRow.swift in Sources */,
+				C913C67F26F78A5F00369B2C /* AppURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

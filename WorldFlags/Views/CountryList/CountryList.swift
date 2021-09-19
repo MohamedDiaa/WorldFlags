@@ -10,12 +10,18 @@ import SwiftUI
 
 struct CountryList: View {
     
-    var random = Array(repeating: RandomItem(), count: 10)
+    @State var list = [CountryBrief]()
     
     var body: some View {
         
-        List(random) {_ in
-            Text("Hello, World!")
+        List(list) {country in
+            Text(country.name ?? "")
+        }
+        .onAppear() {
+            
+            GetCountryBriefListAPI().get { (list, error) in
+                self.list = list ?? [CountryBrief]()
+            }
         }
     }
 }
@@ -25,9 +31,4 @@ struct CountryList_Previews: PreviewProvider {
         CountryList()
     }
 }
-
-struct RandomItem: Identifiable {
-    let id = UUID()
-}
-
 

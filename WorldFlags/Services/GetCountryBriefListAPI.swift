@@ -10,14 +10,13 @@ import Foundation
 
 class GetCountryBriefListAPI {
     
-    func getCountryBriefListAPI() {
+    func get(completion: @escaping ([CountryBrief]?, Error?)->()) {
         
-        guard let url = URL(string: "https://restcountries.eu/rest/v2/all")
-            else { return }
+        let url = AppURL.shared.getCountryListURL
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-
+        
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             
@@ -25,12 +24,13 @@ class GetCountryBriefListAPI {
                 else { return }
             
             let decoder = JSONDecoder()
-
+            
             do {
                 let countryList = try decoder.decode([CountryBrief].self, from: data)
-                print(countryList)
+                completion(countryList, nil)
             } catch {
                 print("error")
+                completion(nil, error)
             }
         }
         

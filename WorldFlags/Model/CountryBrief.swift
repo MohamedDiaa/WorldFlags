@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CountryBrief: Codable, CustomStringConvertible{
+class CountryBrief: Codable,Identifiable, CustomStringConvertible{
     
     let name: String?
     
