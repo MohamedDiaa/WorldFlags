@@ -21,6 +21,7 @@ struct CountryList: View {
                     Text(country.name ?? "")
                 }
             }
+            .navigationBarTitle("Countries List")
         }
         .onAppear() {
             

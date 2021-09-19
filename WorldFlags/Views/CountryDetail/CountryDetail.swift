@@ -13,12 +13,23 @@ struct CountryDetail: View {
     var countryBrief: CountryBrief
     @State var country: Country?
     
+    var keyValueList: [KeyValueItem] {
+        guard let country = country
+            else{ return  [KeyValueItem]() }
+        return Mirror(reflecting: country).children.compactMap{
+            guard let value = $0.value as? String
+                else{ return KeyValueItem(key: $0.label, value: "\( $0.value)")  }
+            return KeyValueItem(key: $0.label, value: value) }
+    }
+    
+    
     var body: some View {
         
-        List{
+        List(keyValueList){ item in
             
-            KeyValueRow(item: KeyValueItem(key: "key", value: "value"))
+            KeyValueRow(item: item)
         }
+        .navigationBarTitle("\(countryBrief.name ?? "") Details")
         .onAppear() {
             
             guard let name = self.countryBrief.name

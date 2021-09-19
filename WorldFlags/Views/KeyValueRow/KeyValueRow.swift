@@ -16,7 +16,7 @@ struct KeyValueRow: View {
         
         HStack {
             
-            Text(item.key)
+            Text(item.key ?? "missing")
             Spacer()
             Text(item.value ?? "Unknown")
         }

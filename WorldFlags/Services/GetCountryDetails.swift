@@ -27,8 +27,8 @@ class GetCountryDetails {
             let decoder = JSONDecoder()
             
             do {
-                let country = try decoder.decode(Country.self, from: data)
-                completion(country, nil)
+                let countryList = try decoder.decode([Country].self, from: data)
+                completion(countryList.first, nil)
             } catch {
                 print("error")
                 completion(nil, error)

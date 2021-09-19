@@ -143,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				C913C66E26F77DAF00369B2C /* Country.swift */,
-				C913C67326F77F5E00369B2C /* KeyValueItem.swift */,
 				C913C67826F7866400369B2C /* CountryBrief.swift */,
+				C913C67326F77F5E00369B2C /* KeyValueItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

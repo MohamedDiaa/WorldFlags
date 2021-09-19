@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct KeyValueItem {
-    
-    let key: String
+struct KeyValueItem: Identifiable {
+    let id = UUID()
+    let key: String?
     let value: String?
 }

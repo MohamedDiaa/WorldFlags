@@ -18,10 +18,12 @@ struct AppURL {
     
     func getCountryDetails(name: String?) -> URL? {
         
-        guard let stringURL = "https://restcountries.eu/rest/v2/name/\(String(describing: name))"
-            .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        guard let name = name,
+            let percentEncodedName = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             else { return nil }
         
-        return URL(string: stringURL)
+        let url =  URL(string: "https://restcountries.eu/rest/v2/name/\(percentEncodedName)")
+        print(url?.absoluteString)
+        return url
     }
 }
