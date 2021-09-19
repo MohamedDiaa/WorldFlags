@@ -1,5 +1,5 @@
 //
-//  GetCountryBriefListAPI.swift
+//  GetCountryDetails.swift
 //  WorldFlags
 //
 //  Created by Mohamed Diaa on 2021-09-19.
@@ -8,11 +8,12 @@
 
 import Foundation
 
-class GetCountryBriefListAPI {
+class GetCountryDetails {
     
-    func get(completion: @escaping ([CountryBrief]?, Error?)->()) {
+    func get(name: String, completion: @escaping (Country?, Error?)->()) {
         
-        let url = AppURL.shared.getCountryListURL()
+        guard let url = AppURL.shared.getCountryDetails(name: name)
+            else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -26,8 +27,8 @@ class GetCountryBriefListAPI {
             let decoder = JSONDecoder()
             
             do {
-                let countryList = try decoder.decode([CountryBrief].self, from: data)
-                completion(countryList, nil)
+                let country = try decoder.decode(Country.self, from: data)
+                completion(country, nil)
             } catch {
                 print("error")
                 completion(nil, error)

@@ -15,4 +15,8 @@ class CountryBrief: Codable,Identifiable, CustomStringConvertible{
     var description: String {
         return name ?? "name is unavailable"
     }
+    
+    init(name: String?) {
+        self.name = name
+    }
 }

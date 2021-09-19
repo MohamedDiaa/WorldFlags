@@ -14,8 +14,13 @@ struct CountryList: View {
     
     var body: some View {
         
-        List(list) {country in
-            Text(country.name ?? "")
+        NavigationView {
+            List(list) {country in
+                
+                NavigationLink(destination: CountryDetail(countryBrief: country)) {
+                    Text(country.name ?? "")
+                }
+            }
         }
         .onAppear() {
             

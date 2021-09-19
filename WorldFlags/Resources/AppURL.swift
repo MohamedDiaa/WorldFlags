@@ -12,5 +12,16 @@ struct AppURL {
     
     static var shared = AppURL()
     
-    let getCountryListURL: URL = URL(string: "https://restcountries.eu/rest/v2/all")!
+    func getCountryListURL() -> URL {
+        return URL(string: "https://restcountries.eu/rest/v2/all")!
+    }
+    
+    func getCountryDetails(name: String?) -> URL? {
+        
+        guard let stringURL = "https://restcountries.eu/rest/v2/name/\(String(describing: name))"
+            .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            else { return nil }
+        
+        return URL(string: stringURL)
+    }
 }
