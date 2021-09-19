@@ -24,6 +24,9 @@ class GetCountryDetails {
             guard let data = data
                 else { return }
             
+            print("Printing")
+            print(String(data: data as! Data, encoding: String.Encoding.utf8))
+
             let decoder = JSONDecoder()
             
             do {

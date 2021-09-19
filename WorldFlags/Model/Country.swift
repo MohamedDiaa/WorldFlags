@@ -22,16 +22,16 @@ struct Country: Codable {
     let capital: String?
     let altSpellings: [String]?
     let region, subregion: String?
-    let population: Int?
-    let latlng: [Int]?
+    let population: Double?
+    let latlng: [Double]?
     let demonym: String?
-    let area: Int?
+    let area: Double?
     let timezones, borders: [String]?
     let nativeName, numericCode: String?
     let currencies: [Currency]?
     let languages: [Language]?
     let flag: String?
-    //    let regionalBlocs: [RegionalBloc]?
+//    //    let regionalBlocs: [RegionalBloc]?
     let cioc: String?
 }
 
