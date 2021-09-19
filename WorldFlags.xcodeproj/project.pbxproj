@@ -17,6 +17,9 @@
 		C913C66F26F77DAF00369B2C /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C66E26F77DAF00369B2C /* Country.swift */; };
 		C913C67126F77EAF00369B2C /* KeyValueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67026F77EAF00369B2C /* KeyValueRow.swift */; };
 		C913C67426F77F5E00369B2C /* KeyValueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67326F77F5E00369B2C /* KeyValueItem.swift */; };
+		C913C67726F7815E00369B2C /* CountryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67626F7815E00369B2C /* CountryList.swift */; };
+		C913C67926F7866400369B2C /* CountryBrief.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67826F7866400369B2C /* CountryBrief.swift */; };
+		C913C67C26F7870F00369B2C /* GetCountryBriefListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67B26F7870F00369B2C /* GetCountryBriefListAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		C913C66E26F77DAF00369B2C /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C913C67026F77EAF00369B2C /* KeyValueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueRow.swift; sourceTree = "<group>"; };
 		C913C67326F77F5E00369B2C /* KeyValueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueItem.swift; sourceTree = "<group>"; };
+		C913C67626F7815E00369B2C /* CountryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryList.swift; sourceTree = "<group>"; };
+		C913C67826F7866400369B2C /* CountryBrief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBrief.swift; sourceTree = "<group>"; };
+		C913C67B26F7870F00369B2C /* GetCountryBriefListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountryBriefListAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 				C913C64F26F77B6800369B2C /* Assets.xcassets */,
 				C913C65426F77B6800369B2C /* LaunchScreen.storyboard */,
 				C913C65726F77B6800369B2C /* Info.plist */,
+				C913C67A26F786F200369B2C /* Services */,
 				C913C66D26F77C3200369B2C /* Resources */,
 				C913C66C26F77C2A00369B2C /* Model */,
 				C913C66B26F77B8300369B2C /* Views */,
@@ -119,6 +126,7 @@
 		C913C66B26F77B8300369B2C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C913C67526F7811900369B2C /* CountryList */,
 				C913C67226F77F4800369B2C /* KeyValueRow */,
 			);
 			path = Views;
@@ -129,6 +137,7 @@
 			children = (
 				C913C66E26F77DAF00369B2C /* Country.swift */,
 				C913C67326F77F5E00369B2C /* KeyValueItem.swift */,
+				C913C67826F7866400369B2C /* CountryBrief.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +155,22 @@
 				C913C67026F77EAF00369B2C /* KeyValueRow.swift */,
 			);
 			path = KeyValueRow;
+			sourceTree = "<group>";
+		};
+		C913C67526F7811900369B2C /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+				C913C67626F7815E00369B2C /* CountryList.swift */,
+			);
+			path = CountryList;
+			sourceTree = "<group>";
+		};
+		C913C67A26F786F200369B2C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C913C67B26F7870F00369B2C /* GetCountryBriefListAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,10 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C913C67426F77F5E00369B2C /* KeyValueItem.swift in Sources */,
+				C913C67926F7866400369B2C /* CountryBrief.swift in Sources */,
 				C913C66F26F77DAF00369B2C /* Country.swift in Sources */,
 				C913C64A26F77B6200369B2C /* AppDelegate.swift in Sources */,
+				C913C67C26F7870F00369B2C /* GetCountryBriefListAPI.swift in Sources */,
 				C913C64C26F77B6200369B2C /* SceneDelegate.swift in Sources */,
 				C913C64E26F77B6200369B2C /* ContentView.swift in Sources */,
+				C913C67726F7815E00369B2C /* CountryList.swift in Sources */,
 				C913C67126F77EAF00369B2C /* KeyValueRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
