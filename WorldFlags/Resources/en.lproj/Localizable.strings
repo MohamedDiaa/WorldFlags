@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  WorldFlags
+
+  Created by Mohamed Diaa on 2021-09-26.
+  Copyright © 2021 Mohamed Diaa. All rights reserved.
+*/
+
+// Country List Scene
+"Countries List" = "Countries Listing";
+
+// Country Details Scene
+"Details" = "Details";
+
+// error
+"missing" = "missing";
+"Unknown" = "Unknown";
+

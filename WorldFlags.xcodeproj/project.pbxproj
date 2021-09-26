@@ -23,6 +23,7 @@
 		C913C67F26F78A5F00369B2C /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C67E26F78A5F00369B2C /* AppURL.swift */; };
 		C913C68226F78E9600369B2C /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C68126F78E9600369B2C /* CountryDetail.swift */; };
 		C913C68426F7900500369B2C /* GetCountryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C68326F7900500369B2C /* GetCountryDetails.swift */; };
+		C9491CE32700CB8900B68DFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9491CE52700CB8900B68DFB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C913C67E26F78A5F00369B2C /* AppURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
 		C913C68126F78E9600369B2C /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
 		C913C68326F7900500369B2C /* GetCountryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountryDetails.swift; sourceTree = "<group>"; };
+		C9491CE42700CB8900B68DFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				C913C67E26F78A5F00369B2C /* AppURL.swift */,
+				C9491CE52700CB8900B68DFB /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C913C65626F77B6800369B2C /* LaunchScreen.storyboard in Resources */,
+				C9491CE32700CB8900B68DFB /* Localizable.strings in Resources */,
 				C913C65326F77B6800369B2C /* Preview Assets.xcassets in Resources */,
 				C913C65026F77B6800369B2C /* Assets.xcassets in Resources */,
 			);
@@ -331,6 +335,14 @@
 				C913C65526F77B6800369B2C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C9491CE52700CB8900B68DFB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9491CE42700CB8900B68DFB /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

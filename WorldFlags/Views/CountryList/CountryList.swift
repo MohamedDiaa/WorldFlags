@@ -22,7 +22,7 @@ struct CountryList: View {
                     Text(country.name ?? "")
                 }
             }
-            .navigationBarTitle("Countries List")
+            .navigationBarTitle( LocalizedStringKey("Countries List"))
             
         }
         .onAppear() {
