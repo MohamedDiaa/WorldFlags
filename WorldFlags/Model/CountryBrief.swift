@@ -8,14 +8,14 @@
 
 import Foundation
 
-class CountryBrief: Codable,Identifiable, CustomStringConvertible{
-    
+class CountryBrief: Codable, Identifiable, CustomStringConvertible {
+
     let name: String?
-    
+
     var description: String {
         return name ?? "name is unavailable"
     }
-    
+
     init(name: String?) {
         self.name = name
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 class WFCredential {
-    
+
     static let shared = WFCredential()
     let apiAccessKey: String = "dbe96513a151b8bce53aa2c1f4d04d09"
 

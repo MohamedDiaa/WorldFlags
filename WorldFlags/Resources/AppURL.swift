@@ -23,14 +23,14 @@ struct WFURLComponentsModel {
 }
 
 struct AppURL {
-    
+
     static var shared = AppURL()
-    
+
     func getCountryDetailsURLComponents(name: String) -> WFURLComponentsModel {
-        
+
     //    let percentEncodedName = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
         let path = "/v2/name/" + name
-        
+
         //https://api.countrylayer.com/v2/name
         return WFURLComponentsModel(scheme: "http",
                                     host: "api.countrylayer.com",
@@ -38,7 +38,7 @@ struct AppURL {
                                     httpMethod: .get)
     }
     func getCountryListURLComponents() -> WFURLComponentsModel {
-        
+
         //https://api.countrylayer.com/v2/all
         return WFURLComponentsModel(scheme: "http",
                                     host: "api.countrylayer.com",

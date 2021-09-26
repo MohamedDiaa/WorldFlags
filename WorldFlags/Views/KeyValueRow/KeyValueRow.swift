@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct KeyValueRow: View {
-    
+
     var item: KeyValueItem
-    
+
     var body: some View {
-        
+
         HStack {
-            
+
             Text(item.key ?? "missing")
             Spacer()
             Text(item.value ?? "Unknown")

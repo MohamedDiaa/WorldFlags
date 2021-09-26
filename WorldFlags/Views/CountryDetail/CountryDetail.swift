@@ -9,39 +9,38 @@
 import SwiftUI
 
 struct CountryDetail: View {
-    
+
     var countryBrief: CountryBrief
     var getCountryDetails: GetCountryDetailsServiceProtocol = GetCountryDetailsAPI()
     @State var country: Country?
-    
+
     var keyValueList: [KeyValueItem] {
         guard let country = country
-            else{ return  [KeyValueItem]() }
-        return Mirror(reflecting: country).children.compactMap{
+            else { return  [KeyValueItem]() }
+        return Mirror(reflecting: country).children.compactMap {
             guard let value = $0.value as? String
-                else{ return KeyValueItem(key: $0.label, value: "\( $0.value)")  }
+                else { return KeyValueItem(key: $0.label, value: "\( $0.value)")  }
             return KeyValueItem(key: $0.label, value: value) }
     }
-    
-    
+
     var body: some View {
-        
-        VStack{
-            if(self.country?.flagImage != nil){
+
+        VStack {
+            if self.country?.flagImage != nil {
                self.country?.flagImage
             }
-            List(keyValueList){ item in
+            List(keyValueList) { item in
                 KeyValueRow(item: item)
             }
         }
         .navigationBarTitle("\(countryBrief.name ?? "") Details")
-        .onAppear() {
-            
+        .onAppear {
+
             guard let name = self.countryBrief.name
-                else{ return }
-            
+                else { return }
+
             self.getCountryDetails.get(
-            name: name) { (country, error) in
+            name: name) { (country, _) in
                 self.country = country
             }
         }

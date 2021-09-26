@@ -9,33 +9,33 @@
 import Foundation
 
 protocol GetCountryBriefListServiceProtocol {
-    
-    func get(completion: @escaping ([CountryBrief]?, Error?)->())
+
+    func get(completion: @escaping ([CountryBrief]?, Error?)->Void)
 }
 
 class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
-    
-    func get(completion: @escaping ([CountryBrief]?, Error?)->()) {
-        
+
+    func get(completion: @escaping ([CountryBrief]?, Error?)->Void) {
+
         let componentsModel = AppURL.shared.getCountryListURLComponents()
-        
+
         var components = URLComponents(components: componentsModel)
         components.addCredential(credential: WFCredential.shared)
-        
+
         let session = URLSession.shared
         guard let url = components.url
-            else{ return }
-        
+            else { return }
+
         var request = URLRequest(url: url)
         request.httpMethod = componentsModel.httpMethod.rawValue
-        
-        let task = session.dataTask(with: request) { (data, response, error) in
-            
+
+        let task = session.dataTask(with: request) { (data, _, error) in
+
             guard let data = data
                 else { return }
-            
+
             let decoder = JSONDecoder()
-            
+
             do {
                 let countryList = try decoder.decode([CountryBrief].self, from: data)
                 completion(countryList, nil)
@@ -44,7 +44,7 @@ class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
                 completion(nil, error)
             }
         }
-        
+
         task.resume()
     }
 }

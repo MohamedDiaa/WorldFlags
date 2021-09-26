@@ -9,25 +9,25 @@
 import SwiftUI
 
 struct CountryList: View {
-    
+
     var  getCountryBriefList: GetCountryBriefListServiceProtocol = GetCountryBriefListAPI()
     @State var list = [CountryBrief]()
-    
+
     var body: some View {
-        
+
         NavigationView {
             List(list) {country in
-                
+
                 NavigationLink(destination: CountryDetail(countryBrief: country)) {
                     Text(country.name ?? "")
                 }
             }
             .navigationBarTitle(LocalizedStringKey("Countries List"))
-            
+
         }
-        .onAppear() {
-            
-            self.getCountryBriefList.get { (list, error) in
+        .onAppear {
+
+            self.getCountryBriefList.get { (list, _) in
                 self.list = list ?? [CountryBrief]()
             }
         }
@@ -39,4 +39,3 @@ struct CountryList_Previews: PreviewProvider {
         CountryList()
     }
 }
-
