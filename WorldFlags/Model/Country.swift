@@ -13,24 +13,14 @@
 import SwiftUI
 
 struct Country: Codable {
+    
     let name: String?
     let topLevelDomain: [String]?
     let alpha2Code, alpha3Code: String?
     let callingCodes: [String]?
     let capital: String?
     let altSpellings: [String]?
-    let region, subregion: String?
-    let population: Double?
-    let latlng: [Double]?
-    let demonym: String?
-    let area: Double?
-    let timezones, borders: [String]?
-    let nativeName, numericCode: String?
-    let currencies: [Currency]?
-    let languages: [Language]?
-    let flag: String?
-    //    //    let regionalBlocs: [RegionalBloc]?
-    let cioc: String?
+    let region: String?
     
     var flagImage: Image? {
         guard let flagName = alpha2Code?.lowercased()
