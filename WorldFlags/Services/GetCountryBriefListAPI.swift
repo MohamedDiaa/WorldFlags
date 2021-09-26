@@ -17,12 +17,18 @@ class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
     
     func get(completion: @escaping ([CountryBrief]?, Error?)->()) {
         
-        let url = AppURL.shared.getCountryListURL()
+        let componentsModel = AppURL.shared.getCountryListURLComponents()
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        var components = URLComponents(components: componentsModel)
+        components.setQueryItems(with: ["access_key":"dbe96513a151b8bce53aa2c1f4d04d09"])
         
         let session = URLSession.shared
+        guard let url = components.url
+            else{ return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = componentsModel.httpMethod.rawValue
+
         let task = session.dataTask(with: request) { (data, response, error) in
             
             guard let data = data

@@ -17,11 +17,17 @@ class GetCountryDetailsAPI: GetCountryDetailsServiceProtocol {
     
     func get(name: String, completion: @escaping (Country?, Error?)->()) {
         
-        guard let url = AppURL.shared.getCountryDetails(name: name)
+        let componentsModel = AppURL.shared.getCountryDetailsURLComponents(name: name)
+        
+        var components = URLComponents(components: componentsModel)
+        components.setQueryItems(with: ["access_key":"dbe96513a151b8bce53aa2c1f4d04d09"])
+        
+
+        guard let url = components.url
             else { return }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        request.httpMethod = componentsModel.httpMethod.rawValue
         
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in

@@ -24,6 +24,7 @@
 		C913C68226F78E9600369B2C /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C68126F78E9600369B2C /* CountryDetail.swift */; };
 		C913C68426F7900500369B2C /* GetCountryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C68326F7900500369B2C /* GetCountryDetails.swift */; };
 		C9491CE32700CB8900B68DFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9491CE52700CB8900B68DFB /* Localizable.strings */; };
+		C9F8B9532700DB7E000F90D3 /* URLComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8B9522700DB7E000F90D3 /* URLComponentExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C913C68126F78E9600369B2C /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
 		C913C68326F7900500369B2C /* GetCountryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountryDetails.swift; sourceTree = "<group>"; };
 		C9491CE42700CB8900B68DFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C9F8B9522700DB7E000F90D3 /* URLComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				C913C64F26F77B6800369B2C /* Assets.xcassets */,
 				C913C65426F77B6800369B2C /* LaunchScreen.storyboard */,
 				C913C65726F77B6800369B2C /* Info.plist */,
+				C9F8B9512700DB6A000F90D3 /* Shared */,
 				C913C67A26F786F200369B2C /* Services */,
 				C913C66D26F77C3200369B2C /* Resources */,
 				C913C66C26F77C2A00369B2C /* Model */,
@@ -191,6 +194,14 @@
 				C913C68126F78E9600369B2C /* CountryDetail.swift */,
 			);
 			path = CountryDetail;
+			sourceTree = "<group>";
+		};
+		C9F8B9512700DB6A000F90D3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C9F8B9522700DB7E000F90D3 /* URLComponentExtension.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 				C913C67726F7815E00369B2C /* CountryList.swift in Sources */,
 				C913C67126F77EAF00369B2C /* KeyValueRow.swift in Sources */,
 				C913C67F26F78A5F00369B2C /* AppURL.swift in Sources */,
+				C9F8B9532700DB7E000F90D3 /* URLComponentExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
