@@ -25,6 +25,7 @@
 		C913C68426F7900500369B2C /* GetCountryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913C68326F7900500369B2C /* GetCountryDetails.swift */; };
 		C9491CE32700CB8900B68DFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9491CE52700CB8900B68DFB /* Localizable.strings */; };
 		C9F8B9532700DB7E000F90D3 /* URLComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8B9522700DB7E000F90D3 /* URLComponentExtension.swift */; };
+		C9F8B9572700E3D7000F90D3 /* WFCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8B9562700E3D7000F90D3 /* WFCredential.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		C913C68326F7900500369B2C /* GetCountryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountryDetails.swift; sourceTree = "<group>"; };
 		C9491CE42700CB8900B68DFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9F8B9522700DB7E000F90D3 /* URLComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentExtension.swift; sourceTree = "<group>"; };
+		C9F8B9562700E3D7000F90D3 /* WFCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFCredential.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			children = (
 				C913C67B26F7870F00369B2C /* GetCountryBriefListAPI.swift */,
 				C913C68326F7900500369B2C /* GetCountryDetails.swift */,
+				C9F8B9562700E3D7000F90D3 /* WFCredential.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C913C68226F78E9600369B2C /* CountryDetail.swift in Sources */,
+				C9F8B9572700E3D7000F90D3 /* WFCredential.swift in Sources */,
 				C913C67426F77F5E00369B2C /* KeyValueItem.swift in Sources */,
 				C913C67926F7866400369B2C /* CountryBrief.swift in Sources */,
 				C913C66F26F77DAF00369B2C /* Country.swift in Sources */,

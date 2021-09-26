@@ -10,7 +10,7 @@ import Foundation
 
 protocol GetCountryBriefListServiceProtocol {
     
-     func get(completion: @escaping ([CountryBrief]?, Error?)->())
+    func get(completion: @escaping ([CountryBrief]?, Error?)->())
 }
 
 class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
@@ -20,7 +20,7 @@ class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
         let componentsModel = AppURL.shared.getCountryListURLComponents()
         
         var components = URLComponents(components: componentsModel)
-        components.setQueryItems(with: ["access_key":"dbe96513a151b8bce53aa2c1f4d04d09"])
+        components.addCredential(credential: WFCredential.shared)
         
         let session = URLSession.shared
         guard let url = components.url
@@ -28,7 +28,7 @@ class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
         
         var request = URLRequest(url: url)
         request.httpMethod = componentsModel.httpMethod.rawValue
-
+        
         let task = session.dataTask(with: request) { (data, response, error) in
             
             guard let data = data

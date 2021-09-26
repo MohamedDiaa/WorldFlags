@@ -10,6 +10,8 @@ import Foundation
 
 extension URLComponents {
     
+    static let access_key = "access_key"
+    
     mutating func setQueryItems(with parameters: [String: String]) {
         self.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
     }
@@ -19,5 +21,10 @@ extension URLComponents {
         host = components.host
         path = components.path
         scheme = components.scheme
+    }
+    
+    mutating func addCredential(credential: WFCredential) {
+        
+        setQueryItems(with: [URLComponents.access_key:credential.apiAccessKey])
     }
 }

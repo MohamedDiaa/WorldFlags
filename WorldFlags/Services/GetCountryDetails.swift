@@ -20,7 +20,7 @@ class GetCountryDetailsAPI: GetCountryDetailsServiceProtocol {
         let componentsModel = AppURL.shared.getCountryDetailsURLComponents(name: name)
         
         var components = URLComponents(components: componentsModel)
-        components.setQueryItems(with: ["access_key":"dbe96513a151b8bce53aa2c1f4d04d09"])
+        components.addCredential(credential: WFCredential.shared)
         
 
         guard let url = components.url
