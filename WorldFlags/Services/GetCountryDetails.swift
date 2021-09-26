@@ -29,6 +29,8 @@ class GetCountryDetailsAPI: GetCountryDetailsServiceProtocol {
         var request = URLRequest(url: url)
         request.httpMethod = componentsModel.httpMethod.rawValue
         
+        print("url \(url.absoluteString)")
+        
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             

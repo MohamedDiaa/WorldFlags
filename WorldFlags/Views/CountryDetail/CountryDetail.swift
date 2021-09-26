@@ -26,9 +26,13 @@ struct CountryDetail: View {
     
     var body: some View {
         
-        List(keyValueList){ item in
-            
-            KeyValueRow(item: item)
+        VStack{
+            if(self.country?.flagImage != nil){
+               self.country?.flagImage
+            }
+            List(keyValueList){ item in
+                KeyValueRow(item: item)
+            }
         }
         .navigationBarTitle("\(countryBrief.name ?? "") Details")
         .onAppear() {

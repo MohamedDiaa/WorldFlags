@@ -7,12 +7,10 @@
 //
 
 
-///[{"name":"Aruba"
-///,"topLevelDomain":[".aw"],
-///"alpha2Code":"AW","alpha3Code":"ABW","callingCodes":["297"],"capital":"Oranjestad","altSpellings":["AW"],"region":"Americas","subregion":"Caribbean","population":107394,"latlng":[12.5,-69.96666666],"demonym":"Aruban","area":180.0,"gini":null,"timezones":["UTC-04:00"],"borders":[],"nativeName":"Aruba","numericCode":"533","currencies":[{"code":"AWG","name":"Aruban florin","symbol":"ƒ"}],"languages":[{"iso639_1":"nl","iso639_2":"nld","name":"Dutch","nativeName":"Nederlands"},{"iso639_1":"pa","iso639_2":"pan","name":"(Eastern) Punjabi","nativeName":"ਪੰਜਾਬੀ"}],"translations":{"de":"Aruba","es":"Aruba","fr":"Aruba","ja":"アルバ","it":"Aruba","br":"Aruba","pt":"Aruba","nl":"Aruba","hr":"Aruba","fa":"آروبا"},"flag":"https://restcountries.eu/data/abw.svg","regionalBlocs":[],"cioc":"ARU"}]
+///
 ///
 
-import Foundation
+import SwiftUI
 
 struct Country: Codable {
     let name: String?
@@ -31,9 +29,16 @@ struct Country: Codable {
     let currencies: [Currency]?
     let languages: [Language]?
     let flag: String?
-//    //    let regionalBlocs: [RegionalBloc]?
+    //    //    let regionalBlocs: [RegionalBloc]?
     let cioc: String?
+    
+    var flagImage: Image? {
+        guard let flagName = alpha2Code?.lowercased()
+            else { return nil }
+        return Image(flagName)
+    }
 }
+
 
 // MARK: - Currency
 struct Currency: Codable {
@@ -49,6 +54,7 @@ struct Language: Codable {
         case iso6392
         case name, nativeName
     }
+    
 }
 
 

@@ -28,8 +28,8 @@ struct AppURL {
     
     func getCountryDetailsURLComponents(name: String) -> WFURLComponentsModel {
         
-        let percentEncodedName = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
-        let path = "/v2/name/" + percentEncodedName
+    //    let percentEncodedName = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        let path = "/v2/name/" + name
         
         //https://api.countrylayer.com/v2/name
         return WFURLComponentsModel(scheme: "http",
