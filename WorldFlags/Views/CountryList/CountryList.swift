@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CountryList: View {
     
+    var  getCountryBriefList: GetCountryBriefListServiceProtocol = GetCountryBriefListAPI()
     @State var list = [CountryBrief]()
     
     var body: some View {
@@ -22,10 +23,11 @@ struct CountryList: View {
                 }
             }
             .navigationBarTitle("Countries List")
+            
         }
         .onAppear() {
             
-            GetCountryBriefListAPI().get { (list, error) in
+            self.getCountryBriefList.get { (list, error) in
                 self.list = list ?? [CountryBrief]()
             }
         }

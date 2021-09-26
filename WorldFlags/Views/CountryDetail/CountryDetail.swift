@@ -11,6 +11,7 @@ import SwiftUI
 struct CountryDetail: View {
     
     var countryBrief: CountryBrief
+    var getCountryDetails: GetCountryDetailsServiceProtocol = GetCountryDetailsAPI()
     @State var country: Country?
     
     var keyValueList: [KeyValueItem] {
@@ -35,7 +36,7 @@ struct CountryDetail: View {
             guard let name = self.countryBrief.name
                 else{ return }
             
-            GetCountryDetails().get(
+            self.getCountryDetails.get(
             name: name) { (country, error) in
                 self.country = country
             }

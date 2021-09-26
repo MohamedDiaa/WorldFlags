@@ -23,7 +23,6 @@ struct AppURL {
             else { return nil }
         
         let url =  URL(string: "https://restcountries.eu/rest/v2/name/\(percentEncodedName)")
-        print(url?.absoluteString)
         return url
     }
 }

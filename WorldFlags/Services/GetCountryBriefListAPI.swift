@@ -8,7 +8,12 @@
 
 import Foundation
 
-class GetCountryBriefListAPI {
+protocol GetCountryBriefListServiceProtocol {
+    
+     func get(completion: @escaping ([CountryBrief]?, Error?)->())
+}
+
+class GetCountryBriefListAPI: GetCountryBriefListServiceProtocol {
     
     func get(completion: @escaping ([CountryBrief]?, Error?)->()) {
         

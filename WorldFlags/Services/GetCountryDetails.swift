@@ -8,7 +8,12 @@
 
 import Foundation
 
-class GetCountryDetails {
+protocol GetCountryDetailsServiceProtocol {
+    
+    func get(name: String, completion: @escaping (Country?, Error?)->())
+}
+
+class GetCountryDetailsAPI: GetCountryDetailsServiceProtocol {
     
     func get(name: String, completion: @escaping (Country?, Error?)->()) {
         
@@ -24,9 +29,6 @@ class GetCountryDetails {
             guard let data = data
                 else { return }
             
-            print("Printing")
-            print(String(data: data as! Data, encoding: String.Encoding.utf8))
-
             let decoder = JSONDecoder()
             
             do {
